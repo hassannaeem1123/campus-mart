@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buy and sell books, notes, and other campus items with Campus Mart.">
+    <title>Browse Products - Campus Mart</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo"><strong>Campus Mart</strong></a>
+
+        <nav aria-label="Main navigation">
+
+            <ul class="nav-links">
+                <li><button id="theme-toggle" type="button" aria-label="Toggle dark mode">☀️</button></li>
+                <li>
+                    <a href="index.html" aria-current="page">Browse</a>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="btn" href="sell.html">Sell</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-labelledby="welcome-heading">
+            <h1 id="welcome-heading">Browse Products</h1>
+            <p>Welcome to Campus Mart!</p>
+            <p>Find books, notes, and other campus items.</p>
+            <a class="btn" href="sell.html">Start selling</a>
+        </section>
+
+        <section aria-labelledby="available-products">
+            <h2 id="available-products">Available Products</h2>
+
+            <ul>
+                <li>Books</li>
+                <li>Notes</li>
+                <li>Stationery</li>
+            </ul>
+        </section>
+
+        <section class="container" aria-labelledby="latest-heading">
+            <div class="toolbar">
+                <h2 id="latest-heading">Latest listings</h2>
+                <p>❤️ Saved: <span id="fav-count">0</span></p>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="search">Search listings</label>
+                    <input id="search" type="search" placeholder="Try 'book' or 'mouse'" />
+                </div>
+
+                <div class="control-group">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option value="All">All</option>
+                        <option value="Books">Books</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Stationery">Stationery</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="sort">Sort by</label>
+                    <select id="sort">
+                        <option value="Newest">Newest</option>
+                        <option value="Price: low → high">Price: low → high</option>
+                        <option value="Price: high → low">Price: high → low</option>
+                    </select>
+                </div>
+            </div>
+
+            <p id="result-count" aria-live="polite"></p>
+            <div class="listing-grid" id="listing-grid"></div>
+            <p id="saved-total">Total value of saved items: Rs 0</p>
+        </section>
+
+        <section aria-labelledby="textbook-prices">
+            <h2 id="textbook-prices">Used Textbook Prices</h2>
+
+            <table>
+                <caption>Average used-textbook prices this semester</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Book Name</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Price (PKR)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">English Book</th>
+                        <td>English</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Math Book</th>
+                        <td>Mathematics</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Computer Book</th>
+                        <td>Computer Science</td>
+                        <td>600</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">How it works</h2>
+            <ol>
+                <li>Prepare a photo, price, and description of your item.</li>
+                <li>Fill in the sell form.</li>
+                <li>Meet the buyer safely on campus.</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Mart &middot; <a href="mailto:help@campusmart.pk">help@campusmart.pk</a></p>
+    </footer>
+</body>
+
+</html>

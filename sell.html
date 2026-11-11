@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="List your textbooks and other campus items for sale on Campus Mart.">
+    <title>Sell Products - Campus Mart</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="logo"><strong>Campus Mart</strong></a>
+
+        <nav aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Browse</a></li>
+                <li><a href="about.html">About</a></li>
+                <li>
+                    <a class="btn" href="sell.html" aria-current="page">Sell</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="basic-content">
+    <main>
+        <h1>Sell Your Product</h1>
+
+        <form action="#" method="get">
+            <div>
+                <label for="title">Title</label>
+                <input
+                    type="text"
+                    id="title"
+                    name="title"
+                    minlength="5"
+                    maxlength="100"
+                    required
+                >
+            </div>
+
+            <fieldset>
+                <legend>Condition</legend>
+
+                <div>
+                    <input
+                        type="radio"
+                        id="condition-new"
+                        name="condition"
+                        value="new"
+                        required
+                    >
+                    <label for="condition-new">New</label>
+                </div>
+
+                <div>
+                    <input
+                        type="radio"
+                        id="condition-like-new"
+                        name="condition"
+                        value="like-new"
+                    >
+                    <label for="condition-like-new">Like new</label>
+                </div>
+
+                <div>
+                    <input
+                        type="radio"
+                        id="condition-good"
+                        name="condition"
+                        value="good"
+                    >
+                    <label for="condition-good">Good</label>
+                </div>
+
+                <div>
+                    <input
+                        type="radio"
+                        id="condition-fair"
+                        name="condition"
+                        value="fair"
+                    >
+                    <label for="condition-fair">Fair</label>
+                </div>
+            </fieldset>
+
+            <div>
+            <div>
+                <label for="category">Category</label>
+                <select id="category" name="category" required>
+                    <option value="">Select a category</option>
+                    <option value="books">Books</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="stationery">Stationery</option>
+                </select>
+            </div>
+            <div>
+                <label for="price">Price in Rs</label>
+                <input
+                    type="number"
+                    id="price"
+                    name="price"
+                    min="50"
+                    step="1"
+                    required
+                >
+            </div>
+            </div>
+
+            <div>
+                <label for="description">Description</label>
+                <textarea
+                    id="description"
+                    name="description"
+                    rows="5"
+                    minlength="20"
+                    required
+                ></textarea>
+            </div>
+
+            <div>
+                <label for="photo">Photo</label>
+                <input
+                    type="file"
+                    id="photo"
+                    name="photo"
+                    accept="image/*"
+                >
+            </div>
+
+            <div class="ownership">
+                <input
+                    type="checkbox"
+                    id="ownership"
+                    name="ownership"
+                    value="confirmed"
+                    required
+                >
+                <label for="ownership">
+                    I confirm this item is mine to sell
+                </label>
+            </div>
+
+            <button type="submit">Publish listing</button>
+        </form>
+
+        <section aria-labelledby="fees-heading">
+            <h2 id="fees-heading">Selling fees</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Listing type</th>
+                        <th scope="col">Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Standard listing</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td>Featured listing</td>
+                        <td>Rs 500</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Mart &middot; <a href="mailto:help@campusmart.pk">help@campusmart.pk</a></p>
+    </footer>
+    </div>
+</body>
+</html>
